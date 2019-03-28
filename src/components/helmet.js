@@ -23,6 +23,9 @@ export default () => (
 					name="viewport"
 					content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
 				/>
+				<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+				 integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+				 crossorigin="anonymous"/>
 				<meta name="description" content={data.site.siteMetadata.description} />
 				<meta name="keywords" content={data.site.siteMetadata.keywords} />
 				<title>{data.site.siteMetadata.title}</title>

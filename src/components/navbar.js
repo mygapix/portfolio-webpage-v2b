@@ -1,40 +1,37 @@
 import React from 'react';
+import './style.scss';
 import { FaGithub } from 'react-icons/fa';
 
-import './style.scss';
-import gatsbyLogo from '../images/gatsby-icon.png';
-import bulmaLogo from '../images/bulma-logo.png';
-
 const Navbar = () => (
-	<div className="hero-head is-hidden-mobile">
-		<nav className="navbar">
-			<div className="container">
-				<div className="navbar-brand">
-					<a
-						className="navbar-item"
-						href="https://github.com/amandeepmittal/gatsby-bulma-quickstart"
-					>
-						<img src={gatsbyLogo} alt="Logo-1" />
-						<img src={bulmaLogo} alt="Logo-2" />
-					</a>
-				</div>
-				<div id="navbarMenuHeroA" className="navbar-menu">
-					<div className="navbar-end">
-						<span className="navbar-item">
-							<a
-								className="button is-danger is-inverted"
-								href="https://github.com/amandeepmittal/gatsby-bulma-quickstart"
-							>
-								<span className="icon">
-									<FaGithub size="fa-2x" />
-								</span>
-								<span>Download</span>
-							</a>
-						</span>
-					</div>
-				</div>
+	<div className="block ">
+		<nav className="navbar is-active is-size-5 ">
+			<a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+			<div id="navMenu" className="navbar-menu">
+				<a href="" className="navbar-item">Home</a>
+				<a href="" className="navbar-item">Architecture</a>
+				<a href="" className="navbar-item">Interriors</a>
+				<a href="" className="navbar-item">Extras</a>
+				<a href="" className="navbar-item">WebDev</a>
+				<a href="" className="navbar-item">Hobby</a>
+				<a href="" className="navbar-item">Contact</a>
 			</div>
 		</nav>
+		<div className="navbar-social-menu is-size-3 is-inline-flex">
+			<a href="" className="navbar-item">
+				<span className="navbar-icon">
+					<i className="fab fa-github"></i>
+				</span>
+			</a>
+			<a href="" className="navbar-item">
+				<span className="navbar-icon">
+					<i className="fab fa-linkedin"></i>
+				</span>
+			</a>
+		</div>
 	</div>
 );
 
