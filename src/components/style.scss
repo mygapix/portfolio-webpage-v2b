@@ -65,3 +65,15 @@
 		color: $secondary-color;
 	}
 }
+
+.img-wrapper {
+	position: relative;
+}
+
+.img-description {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	fontSize: 15px;
+}

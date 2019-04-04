@@ -1,24 +1,36 @@
 import React from 'react';
-import {
-	FaSass,
-	FaHtml5,
-	FaReact,
-	FaMobileAlt,
-	FaRocket,
-	FaOsi
-} from 'react-icons/fa';
 import './style.scss';
-import Emoji from './emoji';
-import MyComponent from './archGallery';
+import bulmaCarousel from 'bulma-carousel';
+import Helmet from 'react-helmet';
+import img1 from '../images/arch/a1.jpg';
 
-const Architecture = () => (
-	<div>
-		<section className="section is-fullheight">
-			<div className="container">
-				<MyComponent />
+export default class Architecture extends React.Component {
+	constructor(props) {
+		super(props);
+		console.log('constructor');
+
+	}
+	componentDidMount() {
+		console.log('component did mount');
+		const carousel = bulmaCarousel.attach('#carousel-demo', {});
+		console.log('carousel', carousel);
+	}
+	render() {
+		console.log('render');
+		return (
+			<div id="carousel-demo" className="carousel">
+				<div className="img-wrapper item-1">
+					<img src={img1}/>
+					<p className="img-description">Opis</p>
+				</div>
+				<div className="img-wrapper item-2">
+					<img src={img1}/>
+				</div>
+				<div className="img-wrapper item-3">
+					<img src={img1}/>
+				</div>
 			</div>
-		</section>
-	</div>
-);
-
-export default Architecture;
+		);
+	}
+}
+			
